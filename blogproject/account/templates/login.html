@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block contents %}
 <div class="container">
-    <form action="{% url 'create' %}" method="post">
+    <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
+        <br>
+        <h1>Login</h1>
         <br>
        {{form.as_p}}
         <input class="btn-dark" type="submit" value="제출하기">

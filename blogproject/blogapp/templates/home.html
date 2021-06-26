@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% block contents %}
+{% if user.is_authenticated %}
+    안녕하세요 {{user.university}}에 다니는 {{user.major}}를 전공하는 {{user.nickname}}님!
+    {% endif %}
 {% for blog in blogs.all %}
 <br>
 <div class="container">
